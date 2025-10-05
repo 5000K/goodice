@@ -84,12 +84,11 @@ func (g *Goodice) helpGen(term parser.Term, rand *rand.Rand) (ResultPart, error)
 
 // Generate will generate with a random seed
 func (g *Goodice) Generate() (Result, error) {
-	return g.GenerateSeeded(rand.Int())
+	return g.GenerateWith(rand.New(rand.NewSource(int64(rand.Int()))))
 }
 
-// GenerateSeeded will generate with a fixed seed, for deterministic results
-func (g *Goodice) GenerateSeeded(seed int) (Result, error) {
-	gen := rand.New(rand.NewSource(int64(seed)))
+// GenerateWith will generate with a fixed seed, for deterministic results
+func (g *Goodice) GenerateWith(gen *rand.Rand) (Result, error) {
 
 	parts := make([]ResultPart, 1+len(g.expression.Operations))
 
@@ -126,13 +125,13 @@ func (g *Goodice) GenerateSeeded(seed int) (Result, error) {
 }
 
 func Generate(expression string) (Result, error) {
-	return GenerateSeeded(expression, rand.Int())
+	return GenerateWith(expression, rand.New(rand.NewSource(int64(rand.Int()))))
 }
 
-func GenerateSeeded(expression string, seed int) (Result, error) {
+func GenerateWith(expression string, gen *rand.Rand) (Result, error) {
 	g, err := New(expression)
 	if err != nil {
 		return Result{}, err
 	}
-	return g.GenerateSeeded(seed)
+	return g.GenerateWith(gen)
 }
