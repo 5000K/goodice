@@ -2,6 +2,8 @@
 A good, minimal, efficient go rpg-like dice library.
 Straight to the point.
 
+`go get github.com/5000k/goodice`
+
 ## Basic Usage
 
 ```go
@@ -20,6 +22,8 @@ func main(){
 	println(result2.Parts) // contains the result of each dice roll plus all constants
 }
 ```
+
+
 
 ## Supported dice notation
 The parser accepts the standard TTRPG dice notation. It has two main parts: constants and dice rolls

@@ -3,7 +3,7 @@ package test
 import (
 	"testing"
 
-	"github.com/5000K/goodice"
+	"github.com/5000k/goodice"
 )
 
 func TestNew_ErrorCases(t *testing.T) {

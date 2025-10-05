@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/5000K/goodice/parser"
+	"github.com/5000k/goodice/parser"
 )
 
 func TestParser_Parse(t *testing.T) {

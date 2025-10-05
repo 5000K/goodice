@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/5000K/goodice/parser"
+	"github.com/5000k/goodice/parser"
 )
 
 type Goodice struct {
