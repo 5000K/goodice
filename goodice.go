@@ -124,3 +124,15 @@ func (g *Goodice) GenerateSeeded(seed int) (Result, error) {
 		Parts:  parts,
 	}, err
 }
+
+func Generate(expression string) (Result, error) {
+	return GenerateSeeded(expression, rand.Int())
+}
+
+func GenerateSeeded(expression string, seed int) (Result, error) {
+	g, err := New(expression)
+	if err != nil {
+		return Result{}, err
+	}
+	return g.GenerateSeeded(seed)
+}
