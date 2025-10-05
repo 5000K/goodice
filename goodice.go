@@ -117,6 +117,10 @@ func (g *Goodice) GenerateWith(gen *rand.Rand) (Result, error) {
 		// apply negative
 		if op.Operator == '-' {
 			baseRes.Value *= -1 // negate
+
+			for y, v := range baseRes.ResultParts {
+				baseRes.ResultParts[y] = v * -1
+			}
 		}
 
 		parts[i+1] = baseRes
