@@ -1,4 +1,7 @@
 # goodice
+
+[![Go](https://github.com/5000K/goodice/actions/workflows/go.yml/badge.svg)](https://github.com/5000K/goodice/actions/workflows/go.yml)
+
 A good, minimal, efficient go rpg-like dice library.
 Straight to the point.
 
