@@ -50,12 +50,12 @@ func TestGoodice_Generate(t *testing.T) {
 		t.Errorf("Part 1: expected type DiceRoll, got %v", part1.Type)
 	}
 
-	expectedDiceCount := 2
+	expectedDiceCount := 6
 	if part1.Sides != expectedDiceCount {
 		t.Errorf("Part 1: expected Sides (dice count) to be %d, got %d", expectedDiceCount, part1.Sides)
 	}
 
-	if len(part1.ResultParts) != expectedDiceCount {
+	if len(part1.ResultParts) != 2 {
 		t.Errorf("Part 1: expected %d individual die roll results, got %d", expectedDiceCount, len(part1.ResultParts))
 	}
 }
