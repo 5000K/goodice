@@ -62,7 +62,7 @@ func (g *Goodice) helpGen(term parser.Term, rand *rand.Rand) (ResultPart, error)
 
 		return ResultPart{
 			Type:          DiceRoll,
-			Sides:         t.Count,
+			Sides:         t.Sides,
 			Value:         sum,
 			AbsoluteValue: sum,
 			ResultParts:   parts,
