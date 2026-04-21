@@ -31,7 +31,7 @@ func main(){
 ## Supported dice notation
 The parser accepts the standard TTRPG dice notation. It has two main parts: constants and dice rolls
 
-A constant is an integer number (e.g. `7` or `42` - I think you know what an integer is)
+A constant is an integer number (e.g. `7` or `42`)
 
 Dice rolls are in the form of XdY, where:
 - X is an optional integer, **How many dice to roll**. If not provided, 1 die is assumed.
