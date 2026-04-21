@@ -2,8 +2,7 @@
 
 [![Go](https://github.com/5000K/goodice/actions/workflows/go.yml/badge.svg)](https://github.com/5000K/goodice/actions/workflows/go.yml)
 
-A good, minimal, efficient go rpg-like dice library.
-Straight to the point.
+A good, minimal, efficient rpg-like dice library for go (golang).
 
 `go get github.com/5000k/goodice`
 
