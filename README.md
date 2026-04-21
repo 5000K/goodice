@@ -31,16 +31,16 @@ func main(){
 ## Supported dice notation
 The parser accepts the standard TTRPG dice notation. It has two main parts: constants and dice rolls
 
-A constant is an integer number (e.g. `7` or `42`)
+A constant is an integer number (e.g. `7` or `42`).
 
 Dice rolls are in the form of XdY, where:
-- X is an optional integer, **How many dice to roll**. If not provided, 1 die is assumed.
-- d simply is "d" or "D"
-- Y is the amount of sides each die has (e.g. 20 for a D20)
+- **X** is an optional integer - how many dice to roll. If not provided, 1 die is assumed.
+- **d** simply is "d" or "D"
+- **Y** is the amount of sides each die has (e.g. 20 for a D20)
 
 So `D20`, `d20` and `1d20` will all do the same.
 
-The parts can be chained together with the operators + and - (add and subtract). The whole string will be evaluated from left to right, just like you would when calculating it by hand.
+The parts can be chained together with the operators + and - (add and subtract). Example: `3d20-2d8+12` The whole string will be evaluated from left to right, just like you would when calculating it by hand.
 
 ## Reusing parsed scripts
 If you are going to use a script many times, it will be more efficient to reuse a Goodice instance.
